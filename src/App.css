@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* header style*/
+.nav-link:hover {
+    text-decoration: underline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*home*/
+/*  flash sales   */
+.flash-sales-timer {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card .badge {
+    font-size: 15px;
+    padding: 5px 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card img {
+    width: 172px;
+    height: 152px;
+    object-fit: cover;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px) {
+    .flash-sales-timer {
+        text-align: center;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.product-card:hover .add-to-cart-btn {
+    opacity: 1;
+}
+
+.product-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.category {
+    width: 170px;
+    height: 145px;
+    border: 1px solid #0000004D;
+    text-align: center;
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+.time-box {
+    width: 80px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.time-box {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.time-box span {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.time-box small {
+    font-size: 11px;
+}
+
+/*      New Arrival style    */
+.new-arrival .card {
+    border: none;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
+}
+
+.new-arrival .card-image {
+    object-fit:contain;
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+}
+
+.new-arrival .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.new-arrival .card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.new-arrival .card-text {
+    color: #fff;
+}
+.icon-div{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 5px gray;
+}
+.user-info-details{
+    list-style-type: none;
+    width: 255px;
+    background-color:red;
+    z-index: 10;
+    top: 25px;
+    right: -10px;
+}
+.user-info-details a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0);
+}
+.user-info-details a:hover{
+    text-decoration: underline;
 }
